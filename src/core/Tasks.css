@@ -1,0 +1,60 @@
+
+.taskUnit{
+    font-family: 'VNF-Comics San';
+    width: 700px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffffa1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s;
+    animation: flipIn 1s ease;
+}
+
+ol{
+    list-style-type: none;
+    padding: 0;
+}
+
+.taskUnit:hover{
+    background-color: #ffffffd2;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.taskUnit input[type="checkbox"] {
+  margin-right: 10px;
+  transition: transform 0.4s;  
+  transform: scale(1.2);
+}
+
+.taskUnit input[type="checkbox"]:hover{
+    transform: scale(1.5);
+}
+
+.taskButtons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.moveButton,
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 5px;
+  padding: 5px;
+  transition: transform 0.4s;
+}
+
+.moveButton:hover, .deleteButton:hover {
+    transform: translateY(-5px);
+  background-color: #abacacfe;
+}
+
+

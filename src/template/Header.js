@@ -26,7 +26,7 @@ function Header() {
   return (
     <div className="header">
       <div className="appName">
-        <h1>React App</h1>
+        <h1>React Todo App</h1>
         <img className="appLogo" src={appLogo} alt="App Logo"></img>
       </div>
       <div className="headerComponents">
@@ -43,7 +43,12 @@ function Header() {
         </button>
         {about && (
           <div ref={aboutRef} className="info">
-            <p>Change this</p>
+            <p>
+              Welcome to the Todo List App - a simple and effective task
+              management tool built with React. With its intuitive user
+              interface, this app will help you easily organize and manage your
+              to-dos.
+            </p>
             <button className="closeInfoButton" onClick={toggleAbout}>
               Close
             </button>

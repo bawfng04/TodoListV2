@@ -1,16 +1,40 @@
 
+
 .handleForm{
-    border: 1px solid black;
+    margin: auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 255, 255, 0.548);
+    padding: 10px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
 }
 
+.addTaskLabel, .searchLabel {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4CAF50; 
+    font-weight: bold;
+}
 
+.addTaskInput:hover, .searchBar:hover{
+    transform: scale(1.02)
+}
 
 .addTaskInput, .searchBar{
-    width: 300px;
+    width: calc(100% - 170px);
     padding: 10px;
-    border: none;
+    margin-bottom: 10px;
+    border: 1px solid #4CAF50;
     border-radius: 10px;
-    margin: 10px;
+    transition: transform 0.4s;
+}
+
+.addTaskInput:focus, .searchBar:focus{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
 .addTaskInput::placeholder, .searchBar::placeholder{
@@ -18,7 +42,36 @@
 }
 
 .addButton{
+    width: 120px;
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s;
 }
+
+.addButton:hover{
+    transform: translateY(-5px);
+}
+
+.checkFilter{
+    width: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.checkFilter:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+

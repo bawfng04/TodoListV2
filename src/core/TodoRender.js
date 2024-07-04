@@ -1,50 +1,70 @@
 import React from "react";
-import "./Todo.css";
+import "./Tasks.css";
 
 function TodoRender({
+  checked,
+  handleChecked,
+  checkFilter,
   tasks,
   search,
   handleDeleteTask,
   moveTaskUp,
   moveTaskDown,
 }) {
-  if (!tasks) return null;
   return (
-    <div className="render">
-      <ol>
-        {tasks
-          .filter((task) => task.includes(search))
-          .map((task, index) => (
-            <li key={index}>
+    <ol>
+      {tasks
+        .map((task, index) => ({ task, index })) // Map tasks to objects with task and original index
+        .filter(({ task }) => task.includes(search)) // Filter by search
+        .filter(({ index }) => {
+          // Filter based on check status using the original index
+          if (checkFilter === "All") return true;
+          if (checkFilter === "Checked") return checked[index];
+          if (checkFilter === "Unchecked") return !checked[index];
+          return true;
+        })
+        .map(({ task, index }) => (
+          <li key={index} className="taskUnit">
+            <div className="checkAndName">
+              <input
+                type="checkbox"
+                checked={checked[index]}
+                onChange={() => handleChecked(index)}
+              />
               {task}
+            </div>
+            <div className="taskButtons">
               <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleDeleteTask(index);
-                }}
-              >
-                Delete
-              </button>
-              <button
+                className="moveButton"
                 onClick={(e) => {
                   e.preventDefault();
                   moveTaskUp(index);
                 }}
               >
-                Move Up
+                ⬆️
               </button>
               <button
+                className="moveButton"
                 onClick={(e) => {
                   e.preventDefault();
                   moveTaskDown(index);
                 }}
               >
-                Move Down
+                ⬇️
               </button>
-            </li>
-          ))}
-      </ol>
-    </div>
+              <button
+                className="deleteButton"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleDeleteTask(index);
+                }}
+              >
+                ❌
+              </button>
+            </div>
+          </li>
+        ))}
+    </ol>
   );
 }
 
