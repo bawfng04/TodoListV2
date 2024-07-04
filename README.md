@@ -36,10 +36,9 @@ todo-list/
 │   ├── core/
 │   │   ├── TodoHandle.js
 │   │   ├── TodoRender.js
-│   │   ├── ...
+│   │   ├── Main.js
 │   │   └── ...
-│   ├── Main.js
-│   └── Main.css
+│   ├── template/
 ├── package.json
 └── README.md
 ```
