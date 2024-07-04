@@ -1,0 +1,24 @@
+
+.handleForm{
+    border: 1px solid black;
+}
+
+
+
+.addTaskInput, .searchBar{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.addTaskInput::placeholder, .searchBar::placeholder{
+    font-style: italic;
+}
+
+.addButton{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
