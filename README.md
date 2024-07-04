@@ -1,3 +1,62 @@
+# Todo List Application
+
+This is a Todo List application built using React.js. It allows users to manage their tasks, including adding, deleting, checking/unchecking, and rearranging tasks.
+
+## Features
+
+- Add new tasks
+- Mark tasks as completed or unchecked
+- Search for tasks
+- Filter tasks by completion status (All, Checked, Unchecked)
+- Move tasks up or down in the list
+- Delete tasks
+- Persist tasks and their completion status in the browser's local storage
+
+## Technologies Used
+
+- React.js
+- JavaScript
+- HTML
+- CSS
+
+## How to Use the Application
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory and run `npm install` to install the necessary dependencies.
+3. Run `npm start` to start the development server.
+4. Open your web browser and navigate to `http://localhost:3000` to access the Todo List application.
+
+## File Structure
+
+The project is structured as follows:
+
+```
+todo-list/
+├── src/
+│   ├── core/
+│   │   ├── TodoHandle.js
+│   │   ├── TodoRender.js
+│   │   ├── ...
+│   │   └── ...
+│   ├── Main.js
+│   └── Main.css
+├── package.json
+└── README.md
+```
+
+- `TodoHandle.js`: Manages the state of the Todo List, including tasks, search, and filter.
+- `TodoRender.js`: Renders the list of tasks based on the state.
+- `Todo.css`: Styles the Todo List interface.
+- `Tasks.css`: Styles the individual task units.
+- `Main.js`: The main entry point of the application.
+- `Main.css`: Styles the main container of the application.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
