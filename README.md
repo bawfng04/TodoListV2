@@ -26,22 +26,8 @@ This is a Todo List application built using React.js. It allows users to manage 
 3. Run `npm start` to start the development server.
 4. Open your web browser and navigate to `http://localhost:3000` to access the Todo List application.
 
-## File Structure
-
-The project is structured as follows:
-
-```
-todo-list/
-├── src/
-│   ├── core/
-│   │   ├── TodoHandle.js
-│   │   ├── TodoRender.js
-│   │   ├── Main.js
-│   │   └── ...
-│   ├── template/
-├── package.json
-└── README.md
-```
+## Screenshot
+![image](https://github.com/user-attachments/assets/e94e0fc7-b7a9-4c37-8b7b-50916a184242)
 
 - `TodoHandle.js`: Manages the state of the Todo List, including tasks, search, and filter.
 - `TodoRender.js`: Renders the list of tasks based on the state.
